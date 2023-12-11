@@ -103,7 +103,7 @@
                     <label for="idp">Entrada?</label>
                     <input id="idp" type="checkbox" name="dp" value="1"><br>
 
-                    <div id="entryDIV" class="phpMostrarEl">
+                    <div id="entryDIV" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
                         <span class="input-group-addon">$</span>
                         <label for="financingEntry">Valor de Entrada:</label>
                         <input
@@ -138,7 +138,7 @@
 
 
 
-        <div id="data-container" class="phpMostrarEl">
+        <div id="data-container" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
             <div id="important-data" class="data-box">
                 <!-- Table content will be inserted here -->
 
@@ -154,7 +154,7 @@
 
 
 
-        <div id="table-container" class="phpMostrarEl">
+        <div id="table-container" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
             <div id="table-box">
                 <p>Price Table</p>
                 <table id="price-table">
@@ -165,7 +165,7 @@
 
 
 
-        <div id="buttonDIV" class="phpMostrarEl">
+        <div id="buttonDIV" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
             <button id="myButton">Back</button>
         </div>
 
