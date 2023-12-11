@@ -269,7 +269,8 @@ function calculatePrincipalValue($monthlyRate, $time, $installmentValue) {
     return $principalValue;
 }
 
-echo "<script>window.open('index.html', '_self');</script>";
+header("Location: index.php");
+exit;
 
 
 ?>
