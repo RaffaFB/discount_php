@@ -2,7 +2,6 @@
 header("Location: index.html");
 exit;
 
-$tableData = [];
 $mostrarElementos = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -115,9 +114,6 @@ function calcularEquacao($principalValue, $finalValue, $interestRate, $checkbox,
     }
 }
 
-
-
-
 function calcularDerivada($principalValue, $finalValue, $interestRate, $checkbox, $time) {
     $a = 0;
     $b = 0;
@@ -135,9 +131,6 @@ function calcularDerivada($principalValue, $finalValue, $interestRate, $checkbox
         return $principalValue - ($finalValue * $b);
     }
 }
-
-
-
 
 function calcularTaxa($principalValue, $finalValue, $time, $checkbox) {
     $tolerance = 0.0001;
@@ -229,7 +222,6 @@ function popularTabela($tableData, $finalValue, $principalValue, $entryValue) {
     echo '</table>';
 }
 
-
 function mostrarDados($monthlyRate, $principalValue, $finalValue, $time, $installmentValue, $checkbox, $FCoefficient, $valueToBack, $monthsToBack, $backedValue, $entryValue) {
     $importantDataHTML1 =
         '<p class="title">Important data</p>' .
@@ -287,12 +279,7 @@ function calculatePrincipalValue($monthlyRate, $time, $installmentValue) {
     return $principalValue;
 }
 
-if (!empty($mostrarTabela)) {
-    popularTabela($tableData, $finalValue, $principalValue, $entryValue);
-}
-
-<body <?php echo $mostrarElementos ? '' : 'class="hide-elements"'; ?>>
-
 ?>
+
 
 
