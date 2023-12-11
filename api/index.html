@@ -14,8 +14,6 @@
         <script src="js-webshim/minified/polyfiller.js"></script>
     </head>
 
-
-
     <body>
         <fieldset id="cdcfieldset" class="draggable ui-widget-content">
             <legend>
@@ -162,16 +160,9 @@
             </div>
         </div>
 
-
-
-        <div id="buttonDIV" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
-            <button id="myButton">Back</button>
-        </div>
-
-
-
         <script src="LCG.js"></script>
         <script src="script.js"></script>
+
 
         <script>
           var importantDataHTML1 = <?php echo json_encode($importantDataHTML1); ?>;
@@ -181,7 +172,6 @@
 
 
         <script>
-            dragAndSave("#cdcfieldset"); // $("#cdcfieldset").draggable()
 
             webshims.setOptions("forms-ext", {
                 replaceUI: "auto",
@@ -227,15 +217,17 @@
             containerTabela.style.display = "flex";
             containerDados.style.display = "flex";
             botaoVoltar.style.display = "flex";
-            var mostrarTabela = <?php echo json_encode($mostrarTabela); ?>;
 
-            // Se a tabela deve ser mostrada, redireciona para outra página após um curto atraso
-            if (mostrarTabela) {
-              setTimeout(function() {
-                 window.location.href = 'index.php';
-              }, 2000); // Redireciona após 2 segundos (ajuste conforme necessário)
-            }
         </script>
+
+    <?php
+    // Exibir a tabela se os dados forem válidos
+      if (empty($errorMessage)) {
+        $tableData = tabelaPrice($principalValue, $time, $monthlyRate, $entryValue, $installmentValue);
+        popularTabela($tableData, $finalValue, $principalValue, $entryValue);
+      }
+    ?>
+    
     </body>
 </html>
 
