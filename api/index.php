@@ -269,18 +269,5 @@ function calculatePrincipalValue($monthlyRate, $time, $installmentValue) {
     return $principalValue;
 }
 
-echo '<script>';
-echo 'document.getElementById("submitButton").addEventListener("click", validador);';
-echo 'document.getElementById("idp").addEventListener("change", displayEntryDIV);';
-echo 'document.getElementById("myButton").addEventListener("click", function(){ window.open("index.html", "_self"); });';
-echo '</script>';
-
 ?>
-<!-- Agora, adicione o código JavaScript gerado pelo PHP -->
-<script>
-    var importantDataHTML1 = <?php echo json_encode($importantDataHTML1); ?>;
-    var importantDataHTML2 = <?php echo json_encode($importantDataHTML2); ?>;
-    var importantDataHTML3 = <?php echo json_encode($importantDataHTML3); ?>;
 
-    // Agora, você pode usar essas variáveis no seu código JavaScript.
-</script>
