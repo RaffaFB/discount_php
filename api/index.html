@@ -103,7 +103,7 @@
                     <label for="idp">Entrada?</label>
                     <input id="idp" type="checkbox" name="dp" value="1"><br>
 
-                    <div id="entryDIV" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
+                    <div id="entryDIV" class="phpMostrarEl">
                         <span class="input-group-addon">$</span>
                         <label for="financingEntry">Valor de Entrada:</label>
                         <input
@@ -137,8 +137,7 @@
         </fieldset>
 
 
-
-        <div id="data-container" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
+        <div id="data-container" class="phpMostrarEl">
             <div id="important-data" class="data-box">
                 <!-- Table content will be inserted here -->
 
@@ -154,10 +153,10 @@
 
 
 
-        <div id="table-container" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
+        <div id="table-container" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
             <div id="table-box">
                 <p>Price Table</p>
-                <table id="price-table">
+                <table id="price-table" class="phpMostrarEl">
                     <!-- Table content will be inserted here -->
                 </table>
             </div>
@@ -165,7 +164,7 @@
 
 
 
-        <div id="buttonDIV" class="phpMostrarEl <?php echo $mostrarElementos ? '' : 'hidden'; ?>">
+        <div id="buttonDIV" class="phpMostrarEl">
             <button id="myButton">Back</button>
         </div>
 
@@ -230,6 +229,21 @@
             botaoVoltar.style.display = "flex";
 
         </script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              var body = document.querySelector('body');
+              var mostrarElementos = !body.classList.contains('hide-elements');
+
+              var elementosParaMostrarOuOcultar = document.querySelectorAll('.phpMostrarEl');
+
+              elementosParaMostrarOuOcultar.forEach(function(elemento) {
+                  if (!mostrarElementos) {
+                      elemento.style.display = 'none';
+                    }
+                  });
+          });
+</script>
     </body>
 </html>
 
