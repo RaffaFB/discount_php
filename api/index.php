@@ -1,6 +1,4 @@
 <?php
-header("Location: index.php");
-exit;
 
 $mostrarElementos = false;
 
@@ -14,12 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mtb = $_POST["mtb"];
     $idp = isset($_POST["dp"]) ? $_POST["dp"] : 0;
     $entry = $_POST["entry"];
-
-    // Funções de validação e processamento
-    validarFormulario();
-    if (!empty($tableData)) {
-        $mostrarTabela = true;
-    }
 }
 
 function exibirMensagemErro($errorMessage) {
@@ -30,7 +22,6 @@ function exibirMensagemErro($errorMessage) {
 function exibirMensagemSucesso() {
     // Lógica para exibir mensagem de sucesso, se necessário
 }
-
 
 function validarFormulario() {
     $errorMessage = "";
@@ -59,8 +50,6 @@ function validarFormulario() {
         exibirMensagemSucesso();
     }
 }
-
-
 
 function validarDados($principalValue, $finalValue, $time, $monthlyRate, $checkbox, $entryValue, $monthsToBack, $valueToBack) {
     // Funções correspondentes aos cálculos JavaScript
@@ -91,9 +80,6 @@ function validarDados($principalValue, $finalValue, $time, $monthlyRate, $checkb
         mostrarDados($monthlyRate, $principalValue, $finalValue, $time, $installmentValue, $checkbox, $coefficient, $valueToBack, $monthsToBack, $backedValue, $entryValue);
     }
 }
-
-
-
 
 function calcularEquacao($principalValue, $finalValue, $interestRate, $checkbox, $time) {
     $a = 0;
@@ -277,6 +263,13 @@ function calculatePrincipalValue($monthlyRate, $time, $installmentValue) {
     $fator = pow(1 + $monthlyRate / 100, -$time);
     $principalValue = $installmentValue * ((1 - $fator) / ($monthlyRate / 100));
     return $principalValue;
+}
+
+validarFormulario();
+
+// Se os dados forem válidos, calcular e exibir a tabela
+if (empty($errorMessage)) {
+    validarDados($principalValue, $finalValue, $time, $monthlyRate, $entry, $entryValue, $monthsToBack, $valueToBack);
 }
 
 ?>
