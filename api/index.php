@@ -1,5 +1,5 @@
 <?php
-header("Location: newURL.php");
+header("Location: index.php");
 exit;
 
 $mostrarElementos = false;
