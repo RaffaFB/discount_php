@@ -1,0 +1,167 @@
+.box {
+    background-color: antiquewhite;
+    box-shadow: 8px 8px 6px grey;
+    width: 450px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: lightblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-left: 2px;
+}
+body {
+    background-color: #f0f0f2;
+    margin: 0;
+    padding: 2em;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont,
+        "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+}
+input {
+    margin: 10px 3px 10px 3px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
+}
+label {
+    position: relative;
+    top: 12px;
+    width: 190px;
+    float: left;
+}
+legend{
+    border: 5px lightblue solid;
+    margin-left: 1em;
+    background-color: #ff6347;
+    padding: 0.2em 0.8em;
+}
+
+#submitButton {
+    width: 80px;
+    margin-left: 20px;
+}
+#errorMessage {
+    color: red;
+    font-size: 90% !important;
+}
+#successMessage {
+    color: green;
+    font-size: 90% !important;
+    display: block;
+    margin-top: 20px;
+}
+.button {
+    font-size: 13px;
+    color: red;
+    background-color: #f8fad7;
+}
+.button:hover {
+    background-color: #fadad7;
+}
+#draggable {
+    cursor: n-resize;
+}
+#cdcfieldset {
+    cursor: move;
+    display: block;
+    border: 1px black solid;
+    background-color: #cac3ba;
+    width: 400px;
+}
+input.currency {
+    text-align: left;
+    padding-right: 15px;
+}
+.input-group .form-control {
+    float: none;
+}
+.input-group .input-buttons {
+    position: relative;
+    z-index: 3;
+}
+.messages {
+    text-align: center;
+}
+
+#data-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+}
+
+.data-box{
+    background-color: rgba(128, 128, 128, 0.356);
+    width: 20vw;
+    border: solid black 2px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+#table-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#table-box{
+    background-color: rgba(128, 128, 128, 0.356);
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+}
+
+#table-box p{
+    font-size: 1.5em;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.562);
+    text-align: center;
+    padding: 8px;
+}
+
+#buttonDIV{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#myButton{
+    font-size: 1.3em;
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(128, 128, 128, 0.356);
+    border: 5px solid rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
