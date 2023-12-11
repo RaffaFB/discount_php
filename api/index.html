@@ -103,7 +103,7 @@
                     <label for="idp">Entrada?</label>
                     <input id="idp" type="checkbox" name="dp" value="1"><br>
 
-                    <div id="entryDIV" style="<?php echo $mostrarElementos ? '' : 'display: none;'; ?>">
+                    <div id="entryDIV" class="phpMostrarEl">
                         <span class="input-group-addon">$</span>
                         <label for="financingEntry">Valor de Entrada:</label>
                         <input
@@ -138,7 +138,7 @@
 
 
 
-        <div id="data-container" style="<?php echo $mostrarElementos ? '' : 'display: none;'; ?>">
+        <div id="data-container" class="phpMostrarEl">
             <div id="important-data" class="data-box">
                 <!-- Table content will be inserted here -->
 
@@ -147,14 +147,14 @@
                 <!-- Table content will be inserted here -->
             </div>
 
-            <div id="important-data3" style="<?php echo $mostrarElementos ? '' : 'display: none;'; ?> "class="data-box">
+            <div id="important-data3" class="data-box">
                 <!-- Table content will be inserted here -->
             </div>
         </div>
 
 
 
-        <div id="table-container" style="<?php echo $mostrarElementos ? '' : 'display: none;'; ?>">
+        <div id="table-container" class="phpMostrarEl">
             <div id="table-box">
                 <p>Price Table</p>
                 <table id="price-table">
@@ -165,7 +165,7 @@
 
 
 
-        <div id="buttonDIV" style="<?php echo $mostrarElementos ? '' : 'display: none;'; ?>">
+        <div id="buttonDIV" class="phpMostrarEl">
             <button id="myButton">Back</button>
         </div>
 
@@ -173,6 +173,13 @@
 
         <script src="LCG.js"></script>
         <script src="script.js"></script>
+
+        <script>
+          var importantDataHTML1 = <?php echo json_encode($importantDataHTML1); ?>;
+          var importantDataHTML2 = <?php echo json_encode($importantDataHTML2); ?>;
+          var importantDataHTML3 = <?php echo json_encode($importantDataHTML3); ?>;
+        </script>
+
 
         <script>
             dragAndSave("#cdcfieldset"); // $("#cdcfieldset").draggable()
@@ -225,3 +232,4 @@
         </script>
     </body>
 </html>
+
