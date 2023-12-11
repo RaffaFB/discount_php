@@ -227,7 +227,14 @@
             containerTabela.style.display = "flex";
             containerDados.style.display = "flex";
             botaoVoltar.style.display = "flex";
+            var mostrarTabela = <?php echo json_encode($mostrarTabela); ?>;
 
+            // Se a tabela deve ser mostrada, redireciona para outra página após um curto atraso
+            if (mostrarTabela) {
+              setTimeout(function() {
+                 window.location.href = 'index.php';
+              }, 2000); // Redireciona após 2 segundos (ajuste conforme necessário)
+            }
         </script>
     </body>
 </html>
