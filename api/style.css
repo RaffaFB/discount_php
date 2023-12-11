@@ -1,3 +1,7 @@
+.phpMostrarEl{
+  display: none;
+}
+
 .box {
     background-color: antiquewhite;
     box-shadow: 8px 8px 6px grey;
