@@ -137,7 +137,7 @@
         </fieldset>
 
 
-        <div id="data-container" class="phpMostrarEl">
+        <div id="data-container" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
             <div id="important-data" class="data-box">
                 <!-- Table content will be inserted here -->
 
@@ -156,7 +156,7 @@
         <div id="table-container" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
             <div id="table-box">
                 <p>Price Table</p>
-                <table id="price-table" class="phpMostrarEl">
+                <table id="price-table" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
                     <!-- Table content will be inserted here -->
                 </table>
             </div>
@@ -164,7 +164,7 @@
 
 
 
-        <div id="buttonDIV" class="phpMostrarEl">
+        <div id="buttonDIV" class="phpMostrarEl" <?php echo empty($mostrarTabela) ? 'style="display: none;"' : ''; ?>>
             <button id="myButton">Back</button>
         </div>
 
@@ -229,21 +229,6 @@
             botaoVoltar.style.display = "flex";
 
         </script>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              var body = document.querySelector('body');
-              var mostrarElementos = !body.classList.contains('hide-elements');
-
-              var elementosParaMostrarOuOcultar = document.querySelectorAll('.phpMostrarEl');
-
-              elementosParaMostrarOuOcultar.forEach(function(elemento) {
-                  if (!mostrarElementos) {
-                      elemento.style.display = 'none';
-                    }
-                  });
-          });
-</script>
     </body>
 </html>
 
