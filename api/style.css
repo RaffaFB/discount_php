@@ -11,8 +11,8 @@
     margin-left: 2px;
 }
 
-.phpMostrarEl {
-    <?php echo $mostrarElementos ? '' : 'display: none;'; ?>
+.hidden {
+   display: none;
 }
 
 body {
