@@ -1,4 +1,8 @@
 <?php
+<?php
+header("Location: index.html");
+exit;
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Capturar os dados do formulário
     $parc = $_POST["np"];
@@ -268,10 +272,6 @@ function calculatePrincipalValue($monthlyRate, $time, $installmentValue) {
     $principalValue = $installmentValue * ((1 - $fator) / ($monthlyRate / 100));
     return $principalValue;
 }
-
-header("Location: index.php");
-exit;
-
 
 ?>
 
