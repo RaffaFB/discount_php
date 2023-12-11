@@ -12,6 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mtb = $_POST["mtb"];
     $idp = isset($_POST["dp"]) ? $_POST["dp"] : 0;
     $entry = $_POST["entry"];
+
+    if (isset($_POST["np"], $_POST["tax"], $_POST["pv"], $_POST["pp"], $_POST["pb"], $mtb = $_POST["mtb"])) {
+      $parc = $_POST["np"];
+      $itax = $_POST["tax"];
+      $ipv = $_POST["pv"];
+      $ipp = $_POST["pp"];
+      $ipb = $_POST["pb"];
+      $mtb = $_POST["mtb"];
+    } else {
+      exibirMensagemErro("Dados POST ausentes ou inválidos.");
+    }
 }
 
 function exibirMensagemErro($errorMessage) {
